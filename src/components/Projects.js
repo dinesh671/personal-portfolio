@@ -3,8 +3,10 @@ import { Col, Container, Nav, Row, Tab } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
 import colorSharp2 from "../assets/img/color-sharp2.png"
 import projImg1 from "../assets/img/project-img1.png"
-import projImg2 from '../assets/img/project-img2.png';
+import projImg2 from '../assets/img/fem toggle.jpg';
 import projImg3 from '../assets/img/project-img3.png';
+import projImg4 from '../assets/img/project-img2.png';
+
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -12,35 +14,35 @@ import TrackVisibility from 'react-on-screen';
 function Projects() {
    const project = [
      {
-       title: 'Frontend Project',
-       Description: 'Development',
+       title: 'Amazon Landing page',
+       Description: 'Next.js,Tailwind',
        imgUrl: projImg1,
      },
      {
        title: 'Frontend Project',
-       Description: 'Development',
+       Description: 'Next.js, TailwindCSS',
+       imgUrl: projImg3,
+     },
+     {
+       title: 'Social media dashbord dark light toggle',
+       Description: 'HTML, CSS(SCSS), Js, Gulp workflow',
        imgUrl: projImg2,
      },
      {
        title: 'Frontend Project',
        Description: 'Development',
-       imgUrl: projImg3,
+       imgUrl: projImg4,
      },
-     {
-       title: 'Frontend Project',
-       Description: 'Development',
-       imgUrl: projImg2,
-     },
-     {
-       title: 'Frontend Project',
-       Description: 'Development',
-       imgUrl: projImg1,
-     },
-     {
-       title: 'Frontend Project',
-       Description: 'Development',
-       imgUrl: projImg3,
-     },
+    //  {
+    //    title: 'Frontend Project',
+    //    Description: 'Development',
+    //    imgUrl: projImg1,
+    //  },
+    //  {
+    //    title: 'Frontend Project',
+    //    Description: 'Development',
+    //    imgUrl: projImg3,
+    //  },
    ];
    return (
      <section className="project" id="projects">
@@ -55,13 +57,13 @@ function Projects() {
                    }
                  >
                    <h2>Projects</h2>
-                   <p>
+                   {/* <p>
                      Lorem Ipsum is simply dummy text of the printing and
                      typesetting industry. Lorem Ipsum has been the industry's
                      standard dummy text ever since the 1500s, when an unknown
                      printer took a galley of type and scrambled it to make a
                      type specimen book.
-                   </p>
+                   </p> */}
                    <Tab.Container id="project-tabs" defaultActiveKey="first">
                      <Nav
                        variant="pills"
@@ -80,7 +82,7 @@ function Projects() {
                      </Nav>
                      <Tab.Content>
                        <Tab.Pane eventKey="first">
-                         <Row>
+                         <Row sm={6} lg={2}  >
                            {project.map((project, index) => {
                              return <ProjectCard key={index} {...project} />;
                            })}

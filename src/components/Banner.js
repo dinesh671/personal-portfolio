@@ -59,11 +59,9 @@ function Banner() {
                     {`Hi I'm Dinesh`} <span className="wrap"> {text}</span>
                   </h1>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    A final-year student at VIT Bhopal University. a dedicated
+                    coder eager to collaborate on your project and make <br></br> your
+                    vision come true.
                   </p>
                   <a target="_self" href="#connect">
                     <button>
