@@ -78,6 +78,7 @@ function Contact() {
                           type="text"
                           value={formDetails.firstName}
                           placeholder="First Name"
+                          required
                           onChange={(e) =>
                             onFormUpdate('firstName', e.target.value)
                           }
@@ -98,6 +99,7 @@ function Contact() {
                           type="email"
                           value={formDetails.email}
                           placeholder="Email Address"
+                          required
                           onChange={(e) =>
                             onFormUpdate('email', e.target.value)
                           }
