@@ -32,8 +32,8 @@ function Projects() {
        projectUrl: 'https://fem-dash-board.pages.dev/',
      },
      {
-       title: 'Frontend Project',
-       Description: 'Development',
+       title: 'Web animation',
+       Description: 'HTML, CSS, three.js, gsap',
        imgUrl: projImg4,
        projectUrl: 'https://ball-animation-three-js-dinesh671.vercel.app/',
      },
