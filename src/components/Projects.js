@@ -37,6 +37,7 @@ function Projects() {
        imgUrl: projImg4,
        projectUrl: 'https://ball-animation-three-js-dinesh671.vercel.app/',
      },
+     
      //  {
      //    title: 'Frontend Project',
      //    Description: 'Development',
@@ -48,6 +49,13 @@ function Projects() {
      //    imgUrl: projImg3,
      //  },
    ];
+  // const pens = [
+  //   {
+  //     title: "codepen",
+  //     Description: 'pens',
+  //     imgUrl:'https://codepen.io/dinesh671/pen/BaVXVdz',
+  //   }
+  // ]
    return (
      <section className="project" id="projects">
        <Container>
@@ -86,16 +94,31 @@ function Projects() {
                      </Nav>
                      <Tab.Content>
                        <Tab.Pane eventKey="first">
-                         <Row sm={6} lg={2}  >
+                         <Row sm={6} lg={2}>
                            {project.map((project, index) => {
                              return <ProjectCard key={index} {...project} />;
                            })}
                          </Row>
                        </Tab.Pane>
-                       <Tab.Pane eventKey="second">
-                         <Row>Lorem ipsum</Row>
+                       <Tab.Pane eventKey="Second">
+                         <Row sm={6} lg={2}>
+                           <p className="codepen" data-height={300} data-default-tab="html,result" data-slug-hash="gOKxxzE" data-user="dinesh671" style={{height: 300, boxSizing: 'border-box', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid', margin: '1em 0', padding: '1em'}}>
+                      <span>
+                        See the Pen
+                        <a target='_blank' href="https://codepen.io/dinesh671/pen/gOKxxzE" rel="noreferrer">
+                          spotlight mouse animation
+                        </a>
+                        by dasari venkata siddartha dinesh kumar (
+                        <a href="https://codepen.io/dinesh671">
+                          @dinesh671
+                        </a>
+                        ) on <a href="https://codepen.io">CodePen</a>.
+                      </span>
+                    </p>
+
+                         </Row>
                        </Tab.Pane>
-                       <Tab.Pane eventKey="third">lorem ipsum</Tab.Pane>
+                       <Tab.Pane eventKey="Third">lorem ipsum</Tab.Pane>
                      </Tab.Content>
                    </Tab.Container>
                  </div>
