@@ -109,7 +109,7 @@ function Projects() {
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="Third">lorem ipsum</Tab.Pane>
+                      <Tab.Pane eventKey="Third">Codepen animations come here</Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
                 </div>
