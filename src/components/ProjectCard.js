@@ -8,7 +8,7 @@ function ProjectCard({title,Description,imgUrl,projectUrl}) {
         <div className="proj-imgbx">
           <img src={imgUrl} alt="card-Img" className="img" />
           <div className="proj-txtx">
-            <h4>{title}</h4>
+            <h4 className='title'>{title}</h4>
             <span>{Description}</span>
           </div>
         </div>
