@@ -9,7 +9,6 @@ import projImg4 from '../assets/img/project-img4.png';
 import uiprojImg1 from '../assets/img/thumbnail-for-ui-1.png';
 import uiprojImg2 from '../assets/img/thumbnail-for-ui-2.png';
 
-
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -33,88 +32,77 @@ function Projects() {
       imgUrl: projImg2,
       projectUrl: 'https://fem-dash-board.pages.dev/',
     },
-    {
-      title: 'Web animation',
-      Description: 'HTML, CSS, three.js, gsap',
-      imgUrl: projImg4,
-      projectUrl: 'https://ball-animation-three-js-dinesh671.vercel.app/',
-    },
-
-    //  {
-    //    title: 'Frontend Project',
-    //    Description: 'Development',
-    //    imgUrl: projImg1,
-    //  },
-    //  {
-    //    title: 'Frontend Project',
-    //    Description: 'Development',
-    //    imgUrl: projImg3,
-    //  },
   ];
   const uiProject = [
     {
-      title: 'Simple Music app landing page',
-      Description: 'Figma',
-      imgUrl: uiprojImg1,
-      projectUrl: 'https://www.figma.com/community/file/1118199313180979421',
-    },
-    {
-      title: 'Simple retturoo desgin idea 2022',
+      title: 'Simple Retturoo Desgin Idea 2022',
       Description: 'Figma',
       imgUrl: uiprojImg2,
       projectUrl: 'https://www.figma.com/community/file/1118199313180979421',
     },
+    {
+      title: 'Simple Music App landing Page',
+      Description: 'Figma',
+      imgUrl: uiprojImg1,
+      projectUrl: 'https://www.figma.com/community/file/1118199313180979421',
+    },
   ];
+
+  const animaion = [
+    {
+      title: 'Web animation',
+      Description: 'Vite HTML, CSS, three.js, gsap',
+      imgUrl: projImg4,
+      projectUrl: 'https://ball-animation-three-js-dinesh671.vercel.app/',
+    },
+  ];
+
   return (
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? 'animate__animated animate__slideInUp' : ''
-                  }
+          <Col className="">
+            <div>
+              <h2>Projects</h2>
+              <Tab.Container id="project-tabs" defaultActiveKey="first">
+                <Nav
+                  variant="pills"
+                  className="nav-pills mb-5 justify-content-center align-items-center"
+                  id="pills-tab"
                 >
-                  <h2>Projects</h2>
-                  <Tab.Container id="project-tabs" defaultActiveKey="first">
-                    <Nav
-                      variant="pills"
-                      className="nav-pills mb-5 justify-content-center align-items-center"
-                      id="pills-tab"
-                    >
-                      <Nav.Item>
-                        <Nav.Link eventKey="first">Web projects</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="Second">Ui desgin</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="Third">Animations</Nav.Link>
-                      </Nav.Item>
-                    </Nav>
-                    <Tab.Content>
-                      <Tab.Pane eventKey="first">
-                        <Row sm={6} lg={2}>
-                          {project.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="Second">
-                        <Row sm={6} lg={2}>
-                          {uiProject.map((uiProject, index) => {
-                            return <ProjectCard key={index} {...uiProject} />;
-                          })}
-                        </Row>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="Third">Codepen animations come here</Tab.Pane>
-                    </Tab.Content>
-                  </Tab.Container>
-                </div>
-              )}
-            </TrackVisibility>
+                  <Nav.Item>
+                    <Nav.Link eventKey="first">Web projects</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="Second">Ui desgin</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="Third">Animations</Nav.Link>
+                  </Nav.Item>
+                </Nav>
+                <Tab.Content>
+                  <Tab.Pane eventKey="first">
+                    <Row sm={6} lg={2}>
+                      {project.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="Second">
+                    <Row sm={6} lg={2}>
+                      {uiProject.map((uiProject, index) => {
+                        return <ProjectCard key={index} {...uiProject} />;
+                      })}
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="Third">
+                    {animaion.map((animation, index) => {
+                      return <ProjectCard key={index} {...animation} />;
+                    })}
+                  </Tab.Pane>
+                </Tab.Content>
+              </Tab.Container>
+            </div>
           </Col>
         </Row>
       </Container>
