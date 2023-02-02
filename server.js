@@ -64,3 +64,4 @@ router.post("/send", async (req, res) => {
   
 })
 
+// how to run node.js and react app with single command
